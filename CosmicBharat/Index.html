@@ -1,0 +1,455 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CosmicBharat</title>
+    <link rel="stylesheet" href="Index.css">
+    <link rel="stylesheet" href="middle.css">
+    <link rel="stylesheet" href="slok.css">
+    <link rel="stylesheet" href="fact.css">
+
+    <link
+        href="https://fonts.googleapis.com/css2?family=Cinzel+Decorative:wght@700;900&family=Outfit:wght@300;500;700&family=Tiro+Sanskrit&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+
+<body>
+    <nav class="navbar" id="navbar">
+        <a href="#" class="brand-container">
+
+            <div class="symbol-wrapper">
+                <i class="fa-solid fa-infinity brand-icon"></i>
+            </div>
+
+            <div class="brand-text">
+                <div class="main-title">
+                    <span class="text-cosmic">Cosmic</span><span class="text-bharat">Bharat</span>
+                </div>
+                <div class="brand-tagline">Unveiling • The Eternal • Legacy</div>
+            </div>
+        </a>
+
+        <div class="nav-menu" id="navMenu">
+            <div class="nav-item">
+                <div class="nav-link">Knowledge <i class="fa-solid fa-chevron-down"></i></div>
+                <div class="dropdown">
+                    <a href="all pages\AncientScience.html"><i class="fa-solid fa-atom"></i> Ancient Science</a>
+                    <a href="all pages\Education.html"><i class="fa-solid fa-graduation-cap"></i> Gurukul System</a>
+                    <a href="all pages\Scripture.html"><i class="fa-solid fa-book-open"></i> Sacred Scriptures</a>
+                </div>
+            </div>
+
+            <div class="nav-item">
+                <div class="nav-link">Heritage <i class="fa-solid fa-chevron-down"></i></div>
+                <div class="dropdown">
+                    <a href="all pages/Temple.html"><i class="fa-solid fa-gopuram"></i> Temples & Arch.</a>
+                    <a href="all pages/Geogrpahy.html"><i class="fa-solid fa-map-location-dot"></i> Sacred Geography</a>
+                    <a href="all pages/map.html"><i class="fa-solid fa-map"></i> Interactive Map</a>
+                </div>
+            </div>
+
+            <div class="nav-item">
+                <div class="nav-link">Culture <i class="fa-solid fa-chevron-down"></i></div>
+                <div class="dropdown">
+                    <a href="all pages/relegion.html"><i class="fa-solid fa-globe"></i> Regional Culture</a>
+                    <a href="all pages/Festival.html"><i class="fa-solid fa-fire"></i> Festivals & Rituals</a>
+                    <a href="all pages/Music.html"><i class="fa-solid fa-music"></i> Arts, Music & Dance</a>
+                </div>
+            </div>
+
+            <div class="nav-item">
+                <div class="nav-link">Wisdom <i class="fa-solid fa-chevron-down"></i></div>
+                <div class="dropdown">
+                    <a href="all pages/yoga.html"><i class="fa-solid fa-spa"></i> Yoga & Wellness</a>
+                    <a href="all pages/values.html"><i class="fa-solid fa-hands-praying"></i> Values & Dharma</a>
+                    <a href="all pages/god.html"><i class="fa-solid fa-om"></i> Gods & Philosophy</a>
+                </div>
+            </div>
+
+            <div class="nav-item">
+                <div class="nav-link">History <i class="fa-solid fa-chevron-down"></i></div>
+                <div class="dropdown">
+                    <a href="all pages/legends.html"><i class="fa-solid fa-shield-halved"></i> Legends & Warriors</a>
+                    <a href="all pages/Stories.html"><i class="fa-solid fa-crown"></i> The Epic Stories</a>
+                    <a href="all pages/Yug.html"><i class="fa-solid fa-hourglass-half"></i> Cosmic Timeline</a>
+                    <a href="all pages/musium.html"><i class="fa-solid fa-monument"></i> Musium</a>
+                </div>
+            </div>
+
+        </div>
+
+        <a href="User/join.html" class="nav-btn">Join Us</a>
+        <a href="User/AI.html" class="ai-nav-btn">
+            <i class="fa-solid fa-wand-magic-sparkles"></i> Oracle AI
+        </a>
+        <div class="hamburger" onclick="toggleMenu()">
+            <i class="fa-solid fa-bars"></i>
+        </div>
+
+    </nav>
+    <!-- hero section -->
+
+    <section class="hero">
+        <div class="sanskrit-sloka">वसुधैव कुटुम्बकम्</div>
+        <h1>The Eternal <br><span>Civilization</span></h1>
+        <p>Journey into the heart of Bharat. Where ancient wisdom meets scientific reality. Welcome to the digital
+            archive of a living legacy.</p>
+        <!-- <i class="fa-solid fa-angles-down scroll-down"></i> -->
+
+
+        <div class="daily-wisdom">
+
+            <div class="wisdom-card">
+                <i class="fa-solid fa-om card-icon"></i>
+                <span class="wisdom-header">Daily Shloka (Rigveda 1.164.46)</span>
+                <div class="shloka">"Ekam Sat Vipra Bahudha Vadanti"</div>
+                <p class="wisdom-desc" style="font-size: 16px;">"Truth is one, but the wise men call it by many names."
+                    <br><span style="color: var(--gold);">(Unity in Diversity)</span>
+                </p>
+            </div>
+
+            <div class="wisdom-card">
+                <i class="fa-solid fa-code card-icon"></i>
+                <span class="wisdom-header">Roots of Computing</span>
+                <div class="shloka">Pingala's Binary System (300 BCE)</div>
+                <p class="wisdom-desc" style="font-size: 16px;">Centuries before modern computers, Acharya Pingala
+                    described the binary numeral system (0s and 1s) in his Chandaahshastra, forming the foundation of
+                    today's digital code.</p>
+            </div>
+
+        </div>
+    </section>
+
+
+    <!-- midle -->
+    <!-- <div class="atmosphere">
+        <div class="fog"></div>
+    </div> -->
+
+    <section class="soul-section">
+
+        <div class="narrative">
+            <div class="ornament"><i class="fa-solid fa-dharmachakra"></i></div>
+            <h2 class="headline">The Soul of <br>Bharat</h2>
+            <p class="story-text">
+                India is not merely a geography; it is a <span class="highlight">consciousness</span>. It is the only
+                civilization that calls its land 'Mother'. From the frozen peaks of Kailash to the sacred waters of
+                Kanyakumari, this land vibrates with the energy of seekers, sages, and scientists who mapped the cosmos
+                within.
+            </p>
+
+            <div class="trinity-grid">
+                <div class="tri-card">
+                    <div class="tri-circle counter" data-target="5000">0</div>
+                    <span class="tri-label">Years Old</span>
+                </div>
+                <div class="tri-card">
+                    <div class="tri-circle counter" data-target="22">0</div>
+                    <span class="tri-label">Languages</span>
+                </div>
+                <div class="tri-card">
+                    <div class="tri-circle"><i class="fa-solid fa-infinity"></i></div>
+                    <span class="tri-label">Wisdom</span>
+                </div>
+            </div>
+        </div>
+
+        <div class="visual-realm">
+            <div class="cosmic-engine">
+                <div class="ring r1"></div>
+                <div class="ring r2"></div>
+                <div class="ring r3"></div>
+
+                <div class="engine-core">
+                    <div class="floating-symbol">ॐ</div>
+
+                    <div class="sanskrit-mantra m1">पूर्णमदः पूर्णमिदं</div>
+                    <div class="sanskrit-mantra m2">पूर्णात्पूर्णमुदच्यते</div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+
+
+    <!-- in this section we will see some facts -->
+
+    <div id="cosmic-wrapper">
+
+        <div class="global-cosmic-bg">
+            <div class="star-layer stars-small"></div>
+            <div class="star-layer stars-gold"></div>
+            <div class="nebula"></div>
+        </div>
+
+        <section class="hero-cosmic">
+
+
+            <div class="hero-content">
+                <p class="eyebrow-text">Step into the Void</p>
+                <h1 class="main-title">DID YOU KNOW?</h1>
+                <p class="sub-desc">
+                    History is not just what is written.<br>
+                    It is what has been <span style="color:var(--gold);">forgotten</span>.
+                </p>
+            </div>
+        </section>
+
+        <div class="facts-container">
+
+            <div class="fact-row">
+                <div class="fact-img-box">
+                    <img src="Monolithic.png" class="fact-img" alt="Kailasa Temple">
+                </div>
+                <div class="fact-text-box">
+                    <div class="fact-number">01</div>
+                    <h2 class="fact-title">The Monolithic Miracle</h2>
+                    <span class="mystery-tag">Architecture • Impossible</span>
+                    <p class="fact-desc">
+                        The <strong>Kailasa Temple</strong> in Ellora was not built up from the ground, but carved
+                        <strong>top-down</strong> from a single mountain rock.
+                        <br><br>
+                        Over <strong>400,000 tons</strong> of rock were scooped out, yet there is no trace of the debris
+                        within 50 miles. Even with modern cranes and drills, replicating this masterpiece today would
+                        take
+                        decades.
+                    </p>
+                </div>
+            </div>
+
+            <div class="fact-row">
+                <div class="fact-img-box">
+                    <img src="Rustle1.png" class="fact-img" alt="Iron Pillar">
+                </div>
+                <div class="fact-text-box">
+                    <div class="fact-number">02</div>
+                    <h2 class="fact-title">The Rustless Iron</h2>
+                    <span class="mystery-tag">Metallurgy • Nano-tech</span>
+                    <p class="fact-desc">
+                        Standing under the open sky for <strong>1,600 years</strong> through rain, sun, and pollution,
+                        the
+                        <strong>Iron Pillar of Delhi</strong> has not rusted.
+                        <br><br>
+                        Scientists discovered a protective layer of "Misawite" formed by high-phosphorus iron, a
+                        technique
+                        lost to time. Ancient India mastered corrosion resistance centuries before the West.
+                    </p>
+                </div>
+            </div>
+
+            <div class="fact-row">
+                <div class="fact-img-box">
+                    <img src="Shus.png" class="fact-img" alt="Sushruta Surgery">
+                </div>
+                <div class="fact-text-box">
+                    <div class="fact-number">03</div>
+                    <h2 class="fact-title">First Plastic Surgery</h2>
+                    <span class="mystery-tag">Medicine • 600 BCE</span>
+                    <p class="fact-desc">
+                        Long before modern medicine, <strong>Maharishi Sushruta</strong> was performing complex
+                        surgeries.
+                        <br><br>
+                        He documented <strong>Rhinoplasty (Nose Job)</strong>, Cataract surgery, and the use of
+                        anesthesia
+                        in the <em>Sushruta Samhita</em>. His tools were so precise they could split a hair strand.
+                    </p>
+                </div>
+            </div>
+
+            <div class="fact-row">
+                <div class="fact-img-box">
+                    <img src="Atom.png" class="fact-img" alt="Atomic Theory">
+                </div>
+                <div class="fact-text-box">
+                    <div class="fact-number">04</div>
+                    <h2 class="fact-title">The Anu (Atom)</h2>
+                    <span class="mystery-tag">Physics • 600 BCE</span>
+                    <p class="fact-desc">
+                        2,500 years before John Dalton, an Indian sage named <strong>Kanada</strong> proposed the Atomic
+                        Theory.
+                        <br><br>
+                        He stated that all matter is made of indestructible particles called <strong>"Anu"</strong>
+                        (Atom).
+                        He even described their dimensions and how they combine to form matter.
+                    </p>
+                </div>
+            </div>
+
+            <div class="fact-row">
+                <div class="fact-img-box">
+                    <img src="Astronomy.png" class="fact-img" alt="Ancient Indian Astronomy">
+                </div>
+                <div class="fact-text-box">
+                    <div class="fact-number">05</div>
+                    <h2 class="fact-title">The Mathematics of Space</h2>
+                    <span class="mystery-tag">Astronomy • Space Science</span>
+                    <p class="fact-desc">
+                        Long before the invention of the telescope, ancient Indian sages accurately mapped the solar
+                        system, planets, and galaxies.
+                        <br><br>
+                        In the 5th century, <strong>Aryabhata</strong> mathematically proved that the Earth is spherical
+                        and rotates on its axis. Furthermore, ancient texts like the <em>Surya Siddhanta</em> precisely
+                        calculated the time it takes for the Earth to orbit the Sun (365.25 days) and the distances
+                        between planets, showcasing an advanced understanding of the cosmos centuries before modern
+                        space science.
+                    </p>
+                </div>
+            </div>
+
+            <div class="fact-row">
+                <div class="fact-img-box">
+
+                    <img src="MusicDance.png" class="fact-img" alt="Ancient Indian Music and Dance">
+                </div>
+                <div class="fact-text-box">
+                    <div class="fact-number">06</div>
+                    <h2 class="fact-title">The Rhythm of the Cosmos</h2>
+                    <span class="mystery-tag">Acoustics • Performing Arts</span>
+                    <p class="fact-desc">
+                        Long before modern acoustics and music therapy, ancient Indians decoded the profound
+                        mathematical relationship between sound frequencies, rhythm, and the human mind.
+                        <br><br>
+                        Rooted in the <em>Sama Veda</em>, the Indian classical system uses complex fractional
+                        mathematics in its <strong>Tala</strong> (rhythm) structures. Furthermore, texts like Bharata
+                        Muni’s <em>Natya Shastra</em> (200 BCE) scientifically categorized <strong>Ragas</strong> and
+                        expressions to directly stimulate the <strong>Navarasa</strong> (nine human emotions), perfectly
+                        aligning specific melodies with the body's circadian rhythms at different times of the day.
+                    </p>
+                </div>
+            </div>
+
+            <div class="fact-row">
+                <div class="fact-img-box">
+                    <img src="AncientEducation.png" class="fact-img" alt="Ancient Indian Universities and Education">
+                </div>
+                <div class="fact-text-box">
+                    <div class="fact-number">07</div>
+                    <h2 class="fact-title">The Empire of Knowledge</h2>
+                    <span class="mystery-tag">Education • Ancient Universities</span>
+                    <p class="fact-desc">
+                        Long before modern university systems, ancient India was the undisputed intellectual capital of
+                        the world—a true treasure trove of holistic knowledge.
+                        <br><br>
+                        Education wasn't limited to basic literacy; it was a highly structured system covering over
+                        <strong>18 distinct Vidyas</strong> (branches of knowledge). These included the four Vedas, six
+                        Vedangas (auxiliary sciences like astronomy and phonetics), Nyaya (logic), and practical arts
+                        like Ayurveda (medicine) and Dhanurveda (archery). This vast knowledge was imparted in legendary
+                        mega-universities like **Nalanda** and **Takshashila**, attracting thousands of scholars from
+                        across the globe centuries before Western universities existed.
+                    </p>
+                </div>
+            </div>
+            <div class="fact-row">
+                <div class="fact-img-box">
+                    <img src="IndianPhilosophy.png" class="fact-img" alt="Ancient Indian Philosophy and Logic">
+                </div>
+                <div class="fact-text-box">
+                    <div class="fact-number">08</div>
+                    <h2 class="fact-title">The Science of Reality (Darshana)</h2>
+                    <span class="mystery-tag">Philosophy • Metaphysics & Logic</span>
+                    <p class="fact-desc">
+                        Centuries before Western philosophy took shape, ancient Indian thinkers established rigorous
+                        systems of inquiry into the nature of reality, existence, and the human mind, collectively known
+                        as <strong>Darshana</strong> (vision of truth).
+                        <br><br>
+                        Indian philosophy wasn't just abstract speculation; it was highly structured into six orthodox
+                        schools (Shad-Darshana), including <strong>Nyaya</strong> (the science of logic and
+                        epistemology), <strong>Yoga</strong> (practical psychology for mind control), and
+                        <strong>Vedanta</strong> (metaphysics exploring the connection between the self, Atman, and the
+                        cosmic reality, Brahman). These systems provided a logical framework to understand the universe
+                        and the path to ultimate liberation.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- footer -->
+
+
+    <div class="vedic-border">
+        <div class="border-content">
+            <span>सत्यमेव जयते</span> <span>•</span>
+            <span>वसुधैव कुटुम्बकम</span> <span>•</span>
+            <span>धर्मो रक्षति रक्षितः</span> <span>•</span>
+            <span>अहिंसा परमो धर्मः</span> <span>•</span>
+            <span>विद्ययाऽमृतमश्नुते</span> <span>•</span>
+            <span>सत्यमेव जयते</span> <span>•</span>
+            <span>वसुधैव कुटुम्बकम</span> <span>•</span>
+            <span>धर्मो रक्षति रक्षितः</span> <span>•</span>
+            <span>अहिंसा परमो धर्मः</span> <span>•</span>
+            <span>विद्ययाऽमृतमश्नुते</span>
+        </div>
+    </div>
+
+    <footer class="foundation-footer">
+
+        <div class="center-crest"><i class="fa-solid fa-om"></i></div>
+
+        <div class="bg-mandala"></div>
+
+        <div class="footer-grid">
+
+            <div class="f-brand">
+                <div class="main-title">
+                    <span class="text-cosmic">Cosmic</span><span class="text-bharat">Bharat</span>
+                </div>
+                <p>A digital sanctuary preserving the timeless wisdom, science, and culture of the Indian civilization.
+                    From the Vedas to the Space Age.</p>
+                <div class="f-socials">
+                    <a href="#" class="s-btn"><i class="fa-brands fa-instagram"></i></a>
+                    <a href="#" class="s-btn"><i class="fa-brands fa-twitter"></i></a>
+                    <a href="#" class="s-btn"><i class="fa-brands fa-youtube"></i></a>
+                </div>
+            </div>
+
+            <div class="f-pillar">
+                <h4>Gyan (Knowledge)</h4>
+                <ul class="f-list">
+                    <li><a href="ancient_science.html">Ancient Science</a></li>
+                    <li><a href="education_pro.html">Gurukul System</a></li>
+                    <li><a href="scriptures_pro.html">Sacred Texts</a></li>
+                    <li><a href="gods_pro.html">Philosophy</a></li>
+                </ul>
+            </div>
+
+            <div class="f-pillar">
+                <h4>Sanskriti (Culture)</h4>
+                <ul class="f-list">
+                    <li><a href="temples_pro.html">Temples</a></li>
+                    <li><a href="festivals_detailed.html">Festivals</a></li>
+                    <li><a href="arts_comprehensive.html">Arts & Music</a></li>
+                    <li><a href="legends_final.html">Legends</a></li>
+                </ul>
+            </div>
+
+            <div class="f-newsletter">
+                <h4>Join the Archive</h4>
+                <p>Subscribe for weekly insights into the lost history of Bharat.</p>
+                <input type="email" class="nl-field" placeholder="Email Address">
+                <button class="nl-submit">SUBSCRIBE</button>
+            </div>
+            <!-- base bar  -->
+            <!-- <div class="base-bar">
+                <div>&copy; 2025 BharatRoots Project. Built with Pride.</div>
+                <div class="base-links">
+                    <a href="#">Privacy Policy</a>
+                    <a href="#">Terms of Use</a>
+                    <a href="#">Sitemap</a>
+                </div>
+            </div> -->
+
+        </div>
+
+
+
+    </footer>
+
+    <script src="Index.js"> </script>
+</body>
+
+</html>

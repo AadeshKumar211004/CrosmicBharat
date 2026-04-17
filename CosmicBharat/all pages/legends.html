@@ -1,0 +1,552 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Legends & Warriors - BharatRoots</title>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;700;900&family=Outfit:wght@300;400;600&family=Rye&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        :root {
+            --bg-war: #0a0202;
+            --gold: #ffd700;
+            --crimson: #ff0033;
+            --steel: #b0c4de;
+            --text-white: #e0e0e0;
+            --card-glass: rgba(20, 5, 5, 0.9);
+            --border-war: rgba(255, 0, 51, 0.3);
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        html {
+            scroll-behavior: smooth;
+        }
+
+        body {
+            font-family: 'Outfit', sans-serif;
+            background-color: var(--bg-war);
+            color: var(--text-white);
+            background-image: url('https://www.transparenttextures.com/patterns/black-scales.png');
+            overflow-x: hidden;
+        }
+
+        /* --- Hero --- */
+        .hero {
+            text-align: center;
+            padding: 100px 20px 60px;
+            position: relative;
+        }
+
+        .hero-sword {
+            font-size: 5rem;
+            color: var(--steel);
+            margin-bottom: 20px;
+            filter: drop-shadow(0 0 20px var(--crimson));
+            animation: floatSword 4s ease-in-out infinite;
+            transform: rotate(45deg);
+        }
+
+        @keyframes floatSword {
+
+            0%,
+            100% {
+                transform: translateY(0) rotate(45deg);
+            }
+
+            50% {
+                transform: translateY(-20px) rotate(45deg);
+            }
+        }
+
+        .hero h1 {
+            font-family: 'Cinzel', serif;
+            font-size: 4rem;
+            margin-bottom: 10px;
+            background: linear-gradient(to bottom, #fff, var(--crimson));
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+
+        .hero-sub {
+            font-family: 'Rye', serif;
+            color: var(--gold);
+            font-size: 1.2rem;
+            letter-spacing: 4px;
+            text-transform: uppercase;
+            margin-bottom: 20px;
+            display: block;
+        }
+
+        .hero p {
+            color: #aaa;
+            max-width: 700px;
+            margin: 0 auto;
+            font-size: 1.1rem;
+        }
+
+        /* --- GRID MAGIC --- */
+        .legends-container {
+            padding: 50px 2%;
+            max-width: 1600px;
+            margin: 0 auto;
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 30px;
+        }
+
+        /* --- THE PORTRAIT CARDS --- */
+        .legend-card {
+            background: var(--card-glass);
+            border: 1px solid var(--border-war);
+            border-radius: 10px;
+            overflow: hidden;
+            position: relative;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.8);
+            transition: all 0.4s ease;
+            display: flex;
+            flex-direction: column;
+        }
+
+        .legend-card:hover {
+            transform: translateY(-10px);
+            border-color: var(--gold);
+            box-shadow: 0 15px 40px rgba(255, 0, 51, 0.3);
+        }
+
+        .legend-visual {
+            width: 100%;
+            height: 250px;
+            position: relative;
+            overflow: hidden;
+            border-bottom: 1px solid var(--border-war);
+        }
+
+        .legend-img {
+            width: 100%;
+            height: 100%;
+            object-fit:fill;
+            filter: grayscale(80%) contrast(1.2) brightness(0.8);
+            transition: 0.5s;
+        }
+
+        .legend-card:hover .legend-img {
+            filter: grayscale(0%) contrast(1.1) brightness(1);
+            transform: scale(1.05);
+        }
+
+        .era-badge {
+            position: absolute;
+            top: 15px;
+            left: 15px;
+            background: var(--crimson);
+            color: #fff;
+            padding: 4px 10px;
+            font-family: 'Cinzel', serif;
+            font-weight: 700;
+            font-size: 0.8rem;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.5);
+            z-index: 2;
+            border-radius: 3px;
+        }
+
+        /* Content Area */
+        .legend-content {
+            padding: 25px 20px;
+            flex-grow: 1;
+            display: flex;
+            flex-direction: column;
+        }
+
+        .warrior-title {
+            font-size: 0.8rem;
+            color: var(--gold);
+            text-transform: uppercase;
+            letter-spacing: 2px;
+            font-weight: 700;
+            margin-bottom: 5px;
+        }
+
+        .warrior-name {
+            font-family: 'Cinzel', serif;
+            font-size: 1.8rem;
+            color: #fff;
+            margin-bottom: 15px;
+            line-height: 1.1;
+        }
+
+        .war-cry {
+            font-family: 'Tiro Sanskrit', serif;
+            color: var(--crimson);
+            font-size: 1.1rem;
+            margin-bottom: 15px;
+            border-left: 3px solid var(--gold);
+            padding-left: 10px;
+            font-style: italic;
+        }
+
+        .stats-box {
+            margin-bottom: 25px;
+            border-top: 1px solid rgba(255, 255, 255, 0.05);
+            padding-top: 15px;
+        }
+
+        .stat {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 8px;
+        }
+
+        .stat h4 {
+            font-family: 'Cinzel', serif;
+            color: #888;
+            font-size: 0.85rem;
+        }
+
+        .stat h4 i {
+            color: var(--crimson);
+            margin-right: 5px;
+            width: 15px;
+        }
+
+        .stat span {
+            color: var(--gold);
+            font-size: 0.9rem;
+            font-weight: 600;
+            text-align: right;
+        }
+
+        .action-area {
+            margin-top: auto;
+        }
+
+        .btn-story {
+            display: block;
+            width: 100%;
+            text-align: center;
+            padding: 12px 0;
+            background: transparent;
+            border: 1px solid var(--gold);
+            color: var(--gold);
+            border-radius: 5px;
+            font-family: 'Cinzel', serif;
+            font-weight: 700;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            cursor: pointer;
+            transition: 0.3s;
+            text-decoration: none;
+        }
+
+        .btn-story:hover {
+            background: var(--gold);
+            color: #000;
+            box-shadow: 0 0 15px var(--gold);
+        }
+
+        /* --- Modal (Pop-up) Styles --- */
+        .modal-overlay {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(0, 0, 0, 0.95);
+            z-index: 2000;
+            display: none;
+            justify-content: center;
+            align-items: center;
+            opacity: 0;
+            transition: 0.5s;
+        }
+
+        .modal-overlay.active {
+            display: flex;
+            opacity: 1;
+        }
+
+        .modal-box {
+            background: #0a0202;
+            border: 1px solid var(--gold);
+            padding: 40px;
+            width: 90%;
+            max-width: 700px;
+            max-height: 85vh;
+            overflow-y: auto;
+            position: relative;
+            box-shadow: 0 0 50px rgba(255, 0, 51, 0.2);
+            border-radius: 10px;
+        }
+
+        .modal-close {
+            position: absolute;
+            top: 20px;
+            right: 20px;
+            font-size: 2rem;
+            color: #fff;
+            cursor: pointer;
+            transition: 0.3s;
+        }
+
+        .modal-close:hover {
+            color: var(--crimson);
+            transform: rotate(90deg);
+        }
+
+        .m-title {
+            font-family: 'Cinzel', serif;
+            font-size: 2.5rem;
+            color: var(--gold);
+            margin-bottom: 5px;
+            line-height: 1.1;
+        }
+
+        .m-era {
+            color: var(--crimson);
+            font-weight: bold;
+            margin-bottom: 25px;
+            display: block;
+            letter-spacing: 2px;
+            font-size: 0.9rem;
+        }
+
+        .m-text {
+            font-size: 1.05rem;
+            line-height: 1.8;
+            color: #ccc;
+        }
+    </style>
+</head>
+
+<body>
+
+    <section class="hero">
+        <i class="fa-solid fa-khanda hero-sword"></i>
+        <h1>Legends of <span>Valor</span></h1>
+        <span class="hero-sub">Veer Bhogya Vasundhara</span>
+        <p>The Brave shall inherit the Earth. Discover the stories of the warriors who protected Dharma with their blood
+            and steel.</p>
+    </section>
+
+    <div class="legends-container">
+        <div class="legend-card">
+            <div class="legend-visual">
+                <span class="era-badge">1630 - 1680 CE</span>
+                <img src="Images/shivag.png" class="legend-img"
+                    alt="Shivaji">
+            </div>
+            <div class="legend-content">
+                <span class="warrior-title">Father of Navy</span>
+                <h2 class="warrior-name">Chhatrapati Shivaji</h2>
+                <div class="war-cry">"Har Har Mahadev!"</div>
+                <div class="stats-box">
+                    <div class="stat">
+                        <h4><i class="fa-solid fa-chess-knight"></i> Strength</h4><span>Guerilla Warfare</span>
+                    </div>
+                    <div class="stat">
+                        <h4><i class="fa-solid fa-gavel"></i> Weapon</h4><span>Bhavani Sword</span>
+                    </div>
+                </div>
+                <div class="action-area">
+                    <a href="javascript:void(0)" class="btn-story" onclick="openStory('shivaji')">Read Chronicle</a>
+                </div>
+            </div>
+        </div>
+
+        <div class="legend-card">
+            <div class="legend-visual">
+                <span class="era-badge">1540 - 1597 CE</span>
+                <img src="Images/maharana.png"
+                    class="legend-img" alt="Pratap">
+            </div>
+            <div class="legend-content">
+                <span class="warrior-title">Lion of Mewar</span>
+                <h2 class="warrior-name">Maharana Pratap</h2>
+                <div class="war-cry">"Death before slavery."</div>
+                <div class="stats-box">
+                    <div class="stat">
+                        <h4><i class="fa-solid fa-chess-knight"></i> Strength</h4><span>Resilience</span>
+                    </div>
+                    <div class="stat">
+                        <h4><i class="fa-solid fa-horse"></i> Companion</h4><span>Chetak</span>
+                    </div>
+                </div>
+                <div class="action-area">
+                    <a href="javascript:void(0)" class="btn-story" onclick="openStory('pratap')">Read Chronicle</a>
+                </div>
+            </div>
+        </div>
+
+        <div class="legend-card">
+            <div class="legend-visual">
+                <span class="era-badge">321 - 297 BCE</span>
+                <img src="Images/chandra.png"
+                    class="legend-img" alt="Chandragupta">
+            </div>
+            <div class="legend-content">
+                <span class="warrior-title">First Emperor</span>
+                <h2 class="warrior-name">Chandragupta</h2>
+                <div class="war-cry">"United We Stand."</div>
+                <div class="stats-box">
+                    <div class="stat">
+                        <h4><i class="fa-solid fa-chess-knight"></i> Strength</h4><span>Speed & Spies</span>
+                    </div>
+                    <div class="stat">
+                        <h4><i class="fa-solid fa-user-graduate"></i> Mentor</h4><span>Chanakya</span>
+                    </div>
+                </div>
+                <div class="action-area">
+                    <a href="javascript:void(0)" class="btn-story" onclick="openStory('chandra')">Read Chronicle</a>
+                </div>
+            </div>
+        </div>
+
+        <!-- <div class="legend-card">
+            <div class="legend-visual">
+                <span class="era-badge">Mahabharata</span>
+                <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/5/5a/Abhimanyu_chakravyuha.jpg/640px-Abhimanyu_chakravyuha.jpg"
+                    class="legend-img" alt="Abhimanyu">
+            </div>
+            <div class="legend-content">
+                <span class="warrior-title">Youngest Hero</span>
+                <h2 class="warrior-name">Veer Abhimanyu</h2>
+                <div class="war-cry">"Courage needs no age."</div>
+                <div class="stats-box">
+                    <div class="stat">
+                        <h4><i class="fa-solid fa-bullseye"></i> Skill</h4><span>Archery</span>
+                    </div>
+                    <div class="stat">
+                        <h4><i class="fa-solid fa-crown"></i> Feat</h4><span>Chakravyuha</span>
+                    </div>
+                </div>
+                <div class="action-area">
+                    <a href="javascript:void(0)" class="btn-story" onclick="openStory('abhimanyu')">Read Chronicle</a>
+                </div>
+            </div> -->
+        <!-- </div> -->
+
+        <!-- <div class="legend-card">
+            <div class="legend-visual">
+                <span class="era-badge">1660 CE</span>
+                <img src="https://upload.wikimedia.org/wikipedia/commons/c/c5/Baji_Prabhu_Deshpande.jpg"
+                    class="legend-img" alt="Baji Prabhu">
+            </div>
+            <div class="legend-content">
+                <span class="warrior-title">The Iron Wall</span>
+                <h2 class="warrior-name">Baji Prabhu</h2>
+                <div class="war-cry">"Until the King is safe!"</div>
+                <div class="stats-box">
+                    <div class="stat">
+                        <h4><i class="fa-solid fa-chess-knight"></i> Strength</h4><span>Dual Swords</span>
+                    </div>
+                    <div class="stat">
+                        <h4><i class="fa-solid fa-shield"></i> Battle</h4><span>Pawankhind</span>
+                    </div>
+                </div>
+                <div class="action-area">
+                    <a href="javascript:void(0)" class="btn-story" onclick="openStory('baji')">Read Chronicle</a>
+                </div>
+            </div>
+        </div> -->
+
+        <div class="legend-card">
+            <div class="legend-visual">
+                <span class="era-badge">1828 - 1858 CE</span>
+                <img src="Images/laxb.png" class="legend-img"
+                    alt="Lakshmibai">
+            </div>
+            <div class="legend-content">
+                <span class="warrior-title">Warrior Queen</span>
+                <h2 class="warrior-name">Rani Lakshmibai</h2>
+                <div class="war-cry">"Main Jhansi nahi dungi!"</div>
+                <div class="stats-box">
+                    <div class="stat">
+                        <h4><i class="fa-solid fa-chess-knight"></i> Strength</h4><span>Cavalry Combat</span>
+                    </div>
+                    <div class="stat">
+                        <h4><i class="fa-solid fa-crown"></i> Legacy</h4><span>First Freedom War</span>
+                    </div>
+                </div>
+                <div class="action-area">
+                    <a href="javascript:void(0)" class="btn-story" onclick="openStory('rani')">Read Chronicle</a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="modal-overlay" id="modal">
+        <div class="modal-box">
+            <i class="fa-solid fa-xmark modal-close" onclick="closeModal()"></i>
+            <h2 class="m-title" id="m-name">Name</h2>
+            <span class="m-era" id="m-era">Era</span>
+            <div class="m-text" id="m-text">
+                Loading story...
+            </div>
+        </div>
+    </div>
+
+    <script>
+        const stories = {
+            shivaji: {
+                name: "Chhatrapati Shivaji Maharaj",
+                era: "Maratha Empire (17th Century)",
+                text: "Shivaji Bhonsle I was an Indian ruler and a member of the Bhonsle Maratha clan. Shivaji carved out an enclave from the declining Adilshahi sultanate of Bijapur that formed the genesis of the Maratha Empire. In 1674, he was formally crowned as the Chhatrapati (Emperor) of his realm at Raigad. He established a competent and progressive civil rule with the help of a disciplined military and well-structured administrative organizations. He innovated military tactics, pioneering unconventional methods which leveraged strategic factors like geography, speed, and surprise."
+            },
+            pratap: {
+                name: "Maharana Pratap",
+                era: "Kingdom of Mewar (16th Century)",
+                text: "Pratap Singh I, popularly known as Maharana Pratap, was a king of Mewar from the Sisodia dynasty. He is titled as 'Mewari Rana' and was notable for his military resistance against the expansionism of the Mughal Empire under Akbar, mainly the Battle of Haldighati. He proved that the soul of a warrior cannot be bought."
+            },
+            chandra: {
+                name: "Chandragupta Maurya",
+                era: "Mauryan Empire (321 BCE)",
+                text: "Chandragupta Maurya was the founder of the Maurya Empire in ancient India. He was taught and counselled by the philosopher Chanakya, who had great influence in the formation of his empire. Together, they built one of the largest empires on the Indian subcontinent. Chandragupta's life and accomplishments are described in ancient Greek, Hindu, Buddhist, and Jain texts."
+            },
+            abhimanyu: {
+                name: "Veer Abhimanyu",
+                era: "Mahabharata (Dwapara Yuga)",
+                text: "Abhimanyu was the son of Arjuna and Subhadra. He was the nephew of Lord Krishna. He is famous for his role in the Kurukshetra War, where he entered the Chakravyuha battle formation. He fought valiantly against the Kaurava warriors including Drona, Karna, Duryodhana, and Dushasana. He held them off single-handedly, allowing the Pandava army to regroup."
+            },
+            baji: {
+                name: "Baji Prabhu Deshpande",
+                era: "Maratha Empire (1660 CE)",
+                text: "Baji Prabhu was a commander of Shivaji Maharaj. During the escape from Panhala fort, Baji Prabhu and 300 soldiers held off 10,000 enemy troops at the narrow pass of Pawankhind. Grievously wounded, he refused to die until he heard the cannon fire confirming his king had reached safety."
+            },
+            rani: {
+                name: "Rani Lakshmibai",
+                era: "Rebellion of 1857",
+                text: "The Queen of Jhansi was one of the leading figures of the Indian Rebellion of 1857. Refusing to cede her kingdom to the British East India Company under the 'Doctrine of Lapse', she tied her infant son to her back and fought fiercely on horseback, becoming a symbol of resistance."
+            }
+        };
+
+        function openStory(key) {
+            const data = stories[key];
+            if (data) {
+                document.getElementById('m-name').innerText = data.name;
+                document.getElementById('m-era').innerText = data.era;
+                document.getElementById('m-text').innerText = data.text;
+                document.getElementById('modal').classList.add('active');
+            }
+        }
+
+        function closeModal() {
+            document.getElementById('modal').classList.remove('active');
+        }
+
+        // Close modal when clicking outside the box
+        window.onclick = function (e) {
+            if (e.target == document.getElementById('modal')) closeModal();
+        }
+    </script>
+
+</body>
+
+</html>
